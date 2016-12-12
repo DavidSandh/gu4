@@ -2,7 +2,8 @@ package gu4;
 
 public class Array7x7 {
 	private int[][] arr = new int[7][7];
-	
+	public Array7x7() {
+	}
 	public Array7x7(int nbr) {
 		for(int row = 0; row < arr.length; row++) {
 			for(int col = 0; col < arr[row].length; col++) {
@@ -10,12 +11,18 @@ public class Array7x7 {
 			}
 		}
 	}
+	public Array7x7(int[][] arr){
+		this.arr = arr;
+	}
+	public int[][] getArray() {
+		return arr;
+	}
 	
 	public void setElement(int row,int col, int value) {
 		arr[row][col] = value;
 	}
 	
-	public int getElement(int row, int col, int value) {
+	public int getElement(int row, int col) {
 		return arr[row][col];
 	}
 	public void setRow(int row, Array7 theRow) {
