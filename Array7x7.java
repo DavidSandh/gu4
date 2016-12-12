@@ -27,7 +27,7 @@ public class Array7x7 {
 			arr[i][col] = theCol.getElement(i);
 		}
 	}
-	//test testeststststestsetestestes
+	
 	public Array7 getCol(int col) {
 		Array7 arr7 = new Array7();
 		for(int i = 0; i < 7; i++) {
