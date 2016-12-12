@@ -7,7 +7,7 @@ public class Array7 {
 		
 	}
 	public int getElement(int pos){
-		
+		return arr[pos];
 	}
 
 }
