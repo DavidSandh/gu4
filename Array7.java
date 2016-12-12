@@ -1,18 +1,13 @@
 package gu4;
 
 public class Array7 {
-<<<<<<< HEAD
-
-	David har en otvättad pungkula
-=======
-	int[] arr = new int[7];
+	private int[] arr = new int[7];
 	
-	public void setElement (int pos, int value){
-		
+	public void setElement(int pos, int value) {
+		arr[pos] = value;
 	}
-	public int getElement(int pos){
+	
+	public int getElement(int pos) {
 		return arr[pos];
 	}
->>>>>>> origin/master
-
 }
