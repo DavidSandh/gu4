@@ -1,11 +1,6 @@
 package gu4;
 
 public class Array7x7 {
-<<<<<<< HEAD
-	
-
-}
-=======
 	private int[][] arr = new int[7][7];
 	
 	public void setElement(int row,int col, int value) {
@@ -21,4 +16,3 @@ public class Array7x7 {
 		}
 	}
 }
->>>>>>> origin/master
