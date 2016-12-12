@@ -15,4 +15,11 @@ public class Array7x7 {
 			arr[row][i] = (theRow.getElement(i));
 		}
 	}
+	public Array7 getRow(int row) {
+		Array7 arr7 = new Array7();
+		for(int i = 0; i < 7; i++) {
+			arr7.setElement(i, arr[row][i]);
+		}
+		return arr7;
+	}
 }
