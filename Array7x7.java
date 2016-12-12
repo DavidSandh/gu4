@@ -3,6 +3,14 @@ package gu4;
 public class Array7x7 {
 	private int[][] arr = new int[7][7];
 	
+	public Array7x7(int nbr) {
+		for(int row = 0; row < arr.length; row++) {
+			for(int col = 0; col < arr[row].length; col++) {
+				arr[row][col] = 0;
+			}
+		}
+	}
+	
 	public void setElement(int row,int col, int value) {
 		arr[row][col] = value;
 	}
