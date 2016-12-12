@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 public class IntDisplay extends JComponent {
 	public enum Mode {SHOW_INT, SHOW_BYTES};
     private final int PAGE_SIZE = 7;
-    private int[][] systemValues;
+    private	 int[][] systemValues;
     private int[][] userValues;
     private Mode mode = Mode.SHOW_INT;
     private int textColor = Color.BLACK;
