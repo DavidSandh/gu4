@@ -2,9 +2,6 @@ package gu4;
 
 public class Array7 {
 
-
-	int[] arr = new int[7];
-
 	private int[] arr = new int[7];
 
 	
