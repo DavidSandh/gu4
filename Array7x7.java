@@ -6,7 +6,7 @@ public class Array7x7 {
 	public Array7x7(int nbr) {
 		for(int row = 0; row < arr.length; row++) {
 			for(int col = 0; col < arr[row].length; col++) {
-				arr[row][col] = 0;
+				arr[row][col] = nbr;
 			}
 		}
 	}
