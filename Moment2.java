@@ -30,9 +30,9 @@ public class Moment2 extends JPanel {
 		setLayout(new BorderLayout());
 		txtGridLeft.setPreferredSize(new Dimension(50, 50));
 		txtGridBtm.setPreferredSize(new Dimension(50,50));
-		testBtns[0] = new JButton("Läs Rad");
+		testBtns[0] = new JButton("LÃ¤s Rad");
 		testBtns[1] = new JButton("Skriv Rad");
-		testBtns[2] = new JButton("Läs Kol");
+		testBtns[2] = new JButton("LÃ¤s Kol");
 		testBtns[3] = new JButton("Skriv Kol");
 		inputFieldRow = new JTextField("Input rad nr");
 		inputFieldKol = new JTextField("Input kol nr");
