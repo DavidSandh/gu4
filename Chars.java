@@ -241,7 +241,7 @@ public class Chars {
 			{0,1,0,0,0,0,0},
 			{1,1,1,1,1,1,1}};
 	
-	protected static final int[][] Å ={
+	protected static final int[][] Ã… ={
 			{0,0,1,1,1,0,0},
 			{0,0,1,0,1,0,0},
 			{0,0,1,1,1,0,0},
@@ -250,7 +250,7 @@ public class Chars {
 			{1,0,0,0,0,0,1},
 			{1,0,0,0,0,0,1}};
 	
-	protected static final int[][] Ä ={
+	protected static final int[][] Ã„ ={
 			{0,0,1,0,1,0,0},
 			{0,0,1,0,1,0,0},
 			{0,0,1,1,1,0,0},
@@ -259,7 +259,7 @@ public class Chars {
 			{1,0,0,0,0,0,1},
 			{1,0,0,0,0,0,1}};
 	
-	protected static final int[][] Ö ={
+	protected static final int[][] Ã– ={
 			{0,0,1,0,1,0,0},
 			{0,0,1,0,1,0,0},
 			{0,0,1,1,1,0,0},
