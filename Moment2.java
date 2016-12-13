@@ -54,9 +54,9 @@ public class Moment2 extends JPanel {
 		}
 		btnGrid.add(testBtns[0]);
 		btnGrid.add(testBtns[1]);
+		btnGrid.add(inputFieldRow);
 		btnGrid.add(testBtns[2]);
 		btnGrid.add(testBtns[3]);
-		btnGrid.add(inputFieldRow);
 		btnGrid.add(inputFieldKol);
 		add(grid7x7, BorderLayout.CENTER);
 		add(txtGridBtm, BorderLayout.SOUTH);
