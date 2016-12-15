@@ -15,10 +15,11 @@ import javax.swing.JTextField;
 public class Moment2 extends JPanel implements ActionListener {
 	private JLabel labelArr[][] = new JLabel[7][7];
 	private JPanel grid7x7 = new JPanel(new GridLayout(7, 7, 5, 5));
-	private JPanel txtGridBtm = new JPanel(new GridLayout(1, 7));
+	private JPanel txtGridBtm = new JPanel(new GridLayout(1, 9));
 	private JPanel txtGridLeft = new JPanel(new GridLayout(7, 1));
 	private JPanel txtGridRight = new JPanel(new GridLayout(7, 1));
 	private JPanel btnGrid = new JPanel(new GridLayout(7, 1));
+	//private JPanel rightGrid = new JPanel(new GridLayout)
 	private Font font1 = new Font("Calibri", Font.BOLD, 50);
 	protected JTextField txtFieldArr1[] = new JTextField[7];
 	protected JTextField txtFieldArr2[] = new JTextField[7];
@@ -83,8 +84,8 @@ public class Moment2 extends JPanel implements ActionListener {
 		btnGrid.add(txtFieldArr3[5]);
 		btnGrid.add(inputFieldCol);
 		btnGrid.add(txtFieldArr3[6]);
-		btnGrid.add(shiftLeft);
-		btnGrid.add(shiftRight);
+		txtGridBtm.add(shiftLeft);
+		txtGridBtm.add(shiftRight);
 		add(grid7x7, BorderLayout.CENTER);
 		add(txtGridBtm, BorderLayout.SOUTH);
 		add(txtGridLeft, BorderLayout.WEST);

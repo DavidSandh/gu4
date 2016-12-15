@@ -54,6 +54,7 @@ public class Array7x7 {
 	public  Array7 shiftLeft(Array7 arr) {
 		Array7 tempArr = arr;
 		Array7 tempArr1;
+		
 		for(int i = 6; i >= 0; i--) {
 				tempArr1 = getCol(i);
 				setCol(i,tempArr);
