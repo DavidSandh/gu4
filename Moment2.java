@@ -84,6 +84,7 @@ public class Moment2 extends JPanel implements ActionListener {
 		btnGrid.add(inputFieldCol);
 		btnGrid.add(txtFieldArr3[6]);
 		btnGrid.add(shiftLeft);
+		btnGrid.add(shiftRight);
 		add(grid7x7, BorderLayout.CENTER);
 		add(txtGridBtm, BorderLayout.SOUTH);
 		add(txtGridLeft, BorderLayout.WEST);
@@ -101,6 +102,5 @@ public class Moment2 extends JPanel implements ActionListener {
 				labelArr[i][j].setText(arr.getElement(i, j) + "");
 			}
 		}
-		repaint();
 	}
 }

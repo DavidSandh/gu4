@@ -92,7 +92,7 @@ public class Moment2UserInput extends JFrame implements ActionListener {
 			Array7 tempArr = new Array7();
 			try{
 				for(int i = 0; i < 7; i++) {
-					tempArr.setElement(i, Integer.parseInt(viewer.txtFieldArr3[i].getText()));
+					tempArr.setElement(i, Integer.parseInt(viewer.txtFieldArr1[i].getText()));
 				}
 				tempArr = arr.shiftRight(tempArr);
 				for(int i = 0; i < 7; i++) {

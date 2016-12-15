@@ -66,7 +66,7 @@ public class Array7x7 {
 	public  Array7 shiftRight(Array7 arr) {
 		Array7 tempArr = arr;
 		Array7 tempArr1;
-		for(int i = 0; i >= 6; i--) {
+		for(int i = 0; i < 7; i++) {
 				tempArr1 = getCol(i);
 				setCol(i,tempArr);
 				tempArr = tempArr1;
