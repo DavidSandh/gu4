@@ -70,5 +70,40 @@ public class Moment2UserInput extends JFrame implements ActionListener {
 				System.out.println("Skriv in ett nummer");
 			}
 		}
+		//shift left
+		if(command.equals("Shift left")) {
+			Array7 tempArr = new Array7();
+			try{
+				for(int i = 0; i < 7; i++) {
+					tempArr.setElement(i, Integer.parseInt(viewer.txtFieldArr3[i].getText()));
+				}
+				tempArr = arr.shiftLeft(tempArr);
+				for(int i = 0; i < 7; i++) {
+					viewer.txtFieldArr1[i].setText(String.valueOf(tempArr.getElement(i)));
+				}
+				viewer.update();
+			}
+			catch(NumberFormatException error) {
+				System.out.println("Skriv in nummer i arrayen till höger.");
+			}
+		}
+		
+		if(command.equals("Shift right")) {
+			Array7 tempArr = new Array7();
+			try{
+				for(int i = 0; i < 7; i++) {
+					tempArr.setElement(i, Integer.parseInt(viewer.txtFieldArr3[i].getText()));
+				}
+				tempArr = arr.shiftRight(tempArr);
+				for(int i = 0; i < 7; i++) {
+					viewer.txtFieldArr3[i].setText(String.valueOf(tempArr.getElement(i)));
+				}
+				viewer.update();
+			}
+			catch(NumberFormatException error) {
+				System.out.println("Skriv in nummer i arrayen till höger.");
+			}
+		}
+			
 	}
 }

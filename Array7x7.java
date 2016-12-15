@@ -46,8 +46,32 @@ public class Array7x7 {
 	public Array7 getCol(int col) {
 		Array7 arr7 = new Array7();
 		for(int i = 0; i < 7; i++) {
-			arr7.setElement(i, arr[col][i]);
+			arr7.setElement(i, arr[i][col]);
 		}
 		return arr7;
+	}
+	
+	public  Array7 shiftLeft(Array7 arr) {
+		Array7 tempArr = arr;
+		Array7 tempArr1;
+		for(int i = 6; i >= 0; i--) {
+				tempArr1 = getCol(i);
+				setCol(i,tempArr);
+				tempArr = tempArr1;
+		}
+		return tempArr;
+		
+	}
+	
+	public  Array7 shiftRight(Array7 arr) {
+		Array7 tempArr = arr;
+		Array7 tempArr1;
+		for(int i = 0; i >= 6; i--) {
+				tempArr1 = getCol(i);
+				setCol(i,tempArr);
+				tempArr = tempArr1;
+		}
+		return tempArr;
+		
 	}
 }
