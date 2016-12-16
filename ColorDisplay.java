@@ -24,7 +24,6 @@ public class ColorDisplay extends JComponent {
 	private Graphics2D dBufferG;
 	private int width;
 	private int height;
-	private Array7x7 arr = new Array7x7();
 
 	public ColorDisplay(int background, int grid) {
 		this(1, 1, background, grid);
@@ -191,11 +190,11 @@ public class ColorDisplay extends JComponent {
 //				{Color.RED,Color.RED,Color.RED,Color.RED,Color.RED,Color.RED,Color.RED},
 //				{Color.RED,Color.RED,Color.RED,Color.RED,Color.RED,Color.RED,Color.RED},
 //				{Color.RED,Color.RED,Color.RED,Color.RED,Color.RED,Color.RED,Color.RED}};
-//		ColorDisplay d = new ColorDisplay(1,1,Color.WHITE,Color.BLACK,1,10);
+//		ColorDisplay d = new ColorDisplay(4,2,Color.WHITE,Color.BLACK,1,10);
 //		d.setDisplay(arr,2,1); // arr har röd-värde i samtliga element
 //		d.updateDisplay();
-
+//
 //		JOptionPane.showMessageDialog(null,d);
-//		JOptionPane.showMessageDialog(null, new ColorDisplay(Color.RED,Color.WHITE));
+		JOptionPane.showMessageDialog(null, new ColorDisplay(Color.RED,Color.WHITE));
 	}
 }
