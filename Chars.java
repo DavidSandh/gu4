@@ -65,11 +65,11 @@ public class Chars {
 	protected static final int[][] G ={
 			{0,0,1,1,1,0,0},
 			{0,1,0,0,0,1,0},
-			{1,0,0,0,0,0,0},
-			{1,0,0,1,1,1,0},
-			{1,0,0,0,0,1,0},
+			{0,1,0,0,0,0,0},
+			{0,1,0,1,1,1,0},
 			{0,1,0,0,0,1,0},
-			{0,0,1,1,1,1,0}};
+			{0,1,0,0,0,1,0},
+			{0,0,1,1,1,0,0}};
 	
 	
 	protected static final int[][] H ={
@@ -433,6 +433,7 @@ public class Chars {
 	
 	public static Array7x7 getChar(char chr) {
 		Array7x7 res;
+		chr = Character.toUpperCase(chr);
 		switch (chr) {
 		case 'A':
 			res = new Array7x7(Chars.A);
@@ -576,6 +577,7 @@ public class Chars {
 	
 	public static Array7x7 getChar(char chr, int color) {
 		Array7x7 res;
+		chr = Character.toUpperCase(chr);
 		switch (chr) {
 		case 'A':
 			res = new Array7x7(Chars.A);

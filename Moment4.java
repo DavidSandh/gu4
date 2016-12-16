@@ -8,7 +8,7 @@ public class Moment4 extends ColorDisplay {
 	}
 	
 	public void Test() {
-		super.setDisplay(Chars.getChar('4', Color.RED).getArray());
+		super.setDisplay(Chars.getChar('g', Color.RED).getArray());
 		super.updateDisplay();
 	}
 	
