@@ -340,6 +340,14 @@ public class Chars {
 			{1,0,0,0,0,0,1},
 			{1,0,0,0,0,0,1},
 			{1,1,1,1,1,1,1}};
+	protected static final int[][] AT = {
+			{0,1,1,1,1,1,0},
+			{1,0,0,0,0,0,1},
+			{1,0,1,1,1,0,1},
+			{1,0,1,0,1,0,1},
+			{1,0,1,1,1,1,1},
+			{1,0,0,0,0,0,0},
+			{0,1,1,1,1,0,0}};
 	
 	protected static final int[][] ZERO = {
 			{0,1,1,1,1,1,0},
@@ -570,6 +578,9 @@ public class Chars {
 		default:
 			res = new Array7x7(Chars.UNKNOWN);
 			break;
+		case '@':
+			res = new Array7x7(Chars.AT);
+			break;
 
 		}
 		return res;
@@ -710,6 +721,9 @@ public class Chars {
 			break;
 		case '0':
 			res = new Array7x7(Chars.ZERO);
+			break;
+		case '@':
+			res = new Array7x7(Chars.AT);
 			break;
 		default:
 			res = new Array7x7(Chars.UNKNOWN);
