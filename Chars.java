@@ -2,7 +2,9 @@ package gu4;
 
 public class Chars {
 	
-	public Chars(){
+	
+	public Chars( ){
+		
 	}
 	protected static final int [][] A = {
 			{0,0,0,0,0,0,0},
