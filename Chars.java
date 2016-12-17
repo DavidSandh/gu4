@@ -56,7 +56,7 @@ public class Chars {
 			{0,1,1,1,1,1,0},
 			{0,1,0,0,0,0,0},
 			{0,1,0,0,0,0,0},
-			{0,1,1,1,1,1,0},
+			{0,1,1,1,1,0,0},
 			{0,1,0,0,0,0,0},
 			{0,1,0,0,0,0,0},
 			{0,1,0,0,0,0,0}};
@@ -65,11 +65,11 @@ public class Chars {
 	protected static final int[][] G ={
 			{0,0,1,1,1,0,0},
 			{0,1,0,0,0,1,0},
-			{1,0,0,0,0,0,0},
-			{1,0,0,1,1,1,0},
-			{1,0,0,0,0,1,0},
+			{0,1,0,0,0,0,0},
+			{0,1,0,1,1,1,0},
 			{0,1,0,0,0,1,0},
-			{0,0,1,1,1,1,0}};
+			{0,1,0,0,0,1,0},
+			{0,0,1,1,1,0,0}};
 	
 	
 	protected static final int[][] H ={
@@ -77,7 +77,7 @@ public class Chars {
 			{1,0,0,0,0,0,1},
 			{1,0,0,0,0,0,1},
 			{1,1,1,1,1,1,1},
-			{1,1,1,1,1,1,1},
+			{1,0,0,0,0,0,1},
 			{1,0,0,0,0,0,1},
 			{1,0,0,0,0,0,1}};
 	
@@ -100,9 +100,9 @@ public class Chars {
 			{0,0,1,1,0,0,0}};
 	
 	protected static final int[][] K ={
+			{0,1,0,0,0,0,1},
 			{0,1,0,0,0,1,0},
 			{0,1,0,0,1,0,0},
-			{0,1,0,1,0,0,0},
 			{0,1,1,1,0,0,0},
 			{0,1,0,0,1,0,0},
 			{0,1,0,0,0,1,0},
@@ -118,10 +118,10 @@ public class Chars {
 			{0,0,1,1,1,1,1}};
 	
 	protected static final int[][] M ={
+			{0,0,0,0,0,0,0},
 			{1,1,0,0,0,1,1},
 			{1,0,1,0,1,0,1},
 			{1,0,0,1,0,0,1},
-			{1,0,0,0,0,0,1},
 			{1,0,0,0,0,0,1},
 			{1,0,0,0,0,0,1},
 			{1,0,0,0,0,0,1}};
@@ -212,9 +212,9 @@ public class Chars {
 			{1,0,0,0,0,0,1},
 			{1,0,0,0,0,0,1},
 			{1,0,0,1,0,0,1},
-			{1,0,0,1,0,0,1},
 			{1,0,1,0,1,0,1},
-			{0,1,0,0,0,1,0}};
+			{1,1,0,0,0,1,1},
+			{0,0,0,0,0,0,0}};
 	
 	protected static final int[][] X ={
 			{1,0,0,0,0,0,1},
@@ -226,22 +226,22 @@ public class Chars {
 			{1,0,0,0,0,0,1}};
 	
 	protected static final int[][] Y ={
-			{1,0,0,0,0,0,1},
 			{0,1,0,0,0,1,0},
-			{0,0,1,0,1,0,0},
-			{0,0,0,1,0,0,0},
+			{0,1,0,0,0,1,0},
+			{0,1,0,0,0,1,0},
+			{0,0,1,1,1,0,0},
 			{0,0,0,1,0,0,0},
 			{0,0,0,1,0,0,0},
 			{0,0,0,1,0,0,0}};
 	
 	protected static final int[][] Z ={
-			{1,1,1,1,1,1,1},
+			{0,1,1,1,1,1,0},
 			{0,0,0,0,0,1,0},
 			{0,0,0,0,1,0,0},
 			{0,0,0,1,0,0,0},
 			{0,0,1,0,0,0,0},
 			{0,1,0,0,0,0,0},
-			{1,1,1,1,1,1,1}};
+			{0,1,1,1,1,1,0}};
 	
 	protected static final int[][] Å ={
 			{0,0,0,1,0,0,0},
@@ -340,6 +340,14 @@ public class Chars {
 			{1,0,0,0,0,0,1},
 			{1,0,0,0,0,0,1},
 			{1,1,1,1,1,1,1}};
+	protected static final int[][] AT = {
+			{0,1,1,1,1,1,0},
+			{1,0,0,0,0,0,1},
+			{1,0,1,1,1,0,1},
+			{1,0,1,0,1,0,1},
+			{1,0,1,1,1,1,1},
+			{1,0,0,0,0,0,0},
+			{0,1,1,1,1,0,0}};
 	
 	protected static final int[][] ZERO = {
 			{0,1,1,1,1,1,0},
@@ -433,6 +441,7 @@ public class Chars {
 	
 	public static Array7x7 getChar(char chr) {
 		Array7x7 res;
+		chr = Character.toUpperCase(chr);
 		switch (chr) {
 		case 'A':
 			res = new Array7x7(Chars.A);
@@ -499,6 +508,9 @@ public class Chars {
 			break;
 		case 'V':
 			res = new Array7x7(Chars.V);
+			break;
+		case 'W':
+			res = new Array7x7(Chars.W);
 			break;
 		case 'X':
 			res = new Array7x7(Chars.X);
@@ -569,6 +581,9 @@ public class Chars {
 		default:
 			res = new Array7x7(Chars.UNKNOWN);
 			break;
+		case '@':
+			res = new Array7x7(Chars.AT);
+			break;
 
 		}
 		return res;
@@ -576,6 +591,7 @@ public class Chars {
 	
 	public static Array7x7 getChar(char chr, int color) {
 		Array7x7 res;
+		chr = Character.toUpperCase(chr);
 		switch (chr) {
 		case 'A':
 			res = new Array7x7(Chars.A);
@@ -643,6 +659,9 @@ public class Chars {
 		case 'V':
 			res = new Array7x7(Chars.V);
 			break;
+		case 'W':
+			res = new Array7x7(Chars.W);
+			break;
 		case 'X':
 			res = new Array7x7(Chars.X);
 			break;
@@ -708,6 +727,9 @@ public class Chars {
 			break;
 		case '0':
 			res = new Array7x7(Chars.ZERO);
+			break;
+		case '@':
+			res = new Array7x7(Chars.AT);
 			break;
 		default:
 			res = new Array7x7(Chars.UNKNOWN);

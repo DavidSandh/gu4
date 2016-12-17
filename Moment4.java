@@ -16,6 +16,7 @@ public class Moment4 extends ColorDisplay {
 	}
 
 	public void Test() {
+<<<<<<< HEAD
 		String text = JOptionPane.showInputDialog("Skriv in något");
 		Array7x7[] arr = new Array7x7[super.getHorizontalPages()+1];
 		Array7 temparr = new Array7();
@@ -68,6 +69,9 @@ public class Moment4 extends ColorDisplay {
 //			}
 //		}
 	//	super.setDisplay(Chars.getChar('C', Color.RED).getArray(), 0, 3);
+=======
+		super.setDisplay(Chars.getChar('g', Color.RED).getArray());
+>>>>>>> origin/master
 		super.updateDisplay();
 	}
 	
