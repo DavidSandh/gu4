@@ -11,9 +11,9 @@ import javax.swing.*;
 
 public class Moment4Viewer extends JComponent {
 	private Moment4 m4;
-	private JSlider sliderR = new JSlider(JSlider.HORIZONTAL, 0, 250, 125);
-	private JSlider sliderB = new JSlider(JSlider.HORIZONTAL, 0, 250, 125);
-	private JSlider sliderG = new JSlider(JSlider.HORIZONTAL, 0, 250, 125);
+	private JSlider sliderR = new JSlider(JSlider.HORIZONTAL, 0, 255, 125);
+	private JSlider sliderB = new JSlider(JSlider.HORIZONTAL, 0, 255, 125);
+	private JSlider sliderG = new JSlider(JSlider.HORIZONTAL, 0, 255, 125);
 	private JTextField tfInput = new JTextField("Skriv en text");
 	private JButton btnInput = new JButton("Enter");
 
