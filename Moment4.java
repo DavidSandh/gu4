@@ -1,12 +1,12 @@
 package gu4;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.concurrent.TimeUnit;
 
 import javax.swing.JOptionPane;
 
-public class Moment4 extends ColorDisplay {
-	//private Array7x7 arr = new Array7x7(9);
-
+public class Moment4 extends ColorDisplay implements ActionListener{
 	public Moment4(int background, int grid) {
 		super(background, grid);
 	}
@@ -48,6 +48,10 @@ public class Moment4 extends ColorDisplay {
 			}
 		}
 		super.updateDisplay();
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		
 	}
 	
 
