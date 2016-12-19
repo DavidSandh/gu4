@@ -17,19 +17,21 @@ public class Moment4 extends ColorDisplay {
 
 	public void Test() {
 		String text = JOptionPane.showInputDialog("Skriv in något");
-		Array7x7[] arr = new Array7x7[super.getHorizontalPages()+1];
+		Array7x7[] arr = new Array7x7[super.getHorizontalPages()];
+		Array7x7 arrChar = new Array7x7();
+		
 		Array7 temparr = new Array7();
 		System.out.println(arr.length + "");
-		for(int i = 0; i < arr.length-1; i++) {
+		for(int i = 0; i < arr.length; i++) {
 			arr[i] = new Array7x7();
 		}
 		for (int i = 0; i < text.length(); i++) {
-			arr[arr.length-1] = Chars.getChar(text.charAt(i), Color.RED);
+			arrChar = Chars.getChar(text.charAt(i), Color.RED);
 			int counter2 = 0;
 			for(int j = 0; j < 7; j++) {
-				int counter = arr.length-2;
-				temparr = arr[arr.length-1].getCol(counter2);
-				for(int k = arr.length-1; k > 0; k--) {
+				int counter = arr.length-1;
+				temparr = arrChar.getCol(counter2);
+				for(int k = arr.length-1; k >= 0; k--) {
 					
 					temparr = arr[counter].shiftLeft(temparr);
 					counter--;
