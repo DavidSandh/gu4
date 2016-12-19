@@ -2,11 +2,17 @@ package gu4;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
 import javax.swing.JOptionPane;
 
-public class Moment4 extends ColorDisplay implements ActionListener {
+public class Moment4 extends ColorDisplay{
+	private Moment4Viewer viewer;
+	private String text;
+	private Timer timer;
+	private int color;
 	public Moment4(int background, int grid) {
 		super(background, grid);
 	}
@@ -16,7 +22,8 @@ public class Moment4 extends ColorDisplay implements ActionListener {
 	}
 
 	public void Test() {
-		String text = JOptionPane.showInputDialog("Skriv in något");
+		String text = this.text;
+		int color = this.color;
 		Array7x7[] arr = new Array7x7[super.getHorizontalPages()];
 		for(int sizeCheck = 0; sizeCheck < arr.length; sizeCheck++) {
 			text += " ";
@@ -29,7 +36,7 @@ public class Moment4 extends ColorDisplay implements ActionListener {
 			arr[i] = new Array7x7();
 		}
 		for (int i = 0; i < text.length(); i++) {
-			arrChar = Chars.getChar(text.charAt(i), Color.RED);
+			arrChar = Chars.getChar(text.charAt(i), color);
 			int counter2 = 0;
 			for (int j = 0; j < 7; j++) {
 				int counter = arr.length - 1;
@@ -52,9 +59,22 @@ public class Moment4 extends ColorDisplay implements ActionListener {
 			}
 		}
 	}
+	public class Test extends TimerTask {
 
-	public void actionPerformed(ActionEvent e) {
-
+		@Override
+		public void run() {
+			Test();
+			cancel();
+			
+			
+		}
+		
 	}
-
+	public void addStuff(String text, int color) {
+		this.text = text;
+		this.color = color;
+		timer = new Timer();
+		timer.schedule(new Test(), 500, 500);
+		
+	}
 }
