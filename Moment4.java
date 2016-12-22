@@ -2,6 +2,7 @@ package gu4;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -25,11 +26,11 @@ public class Moment4 extends ColorDisplay{
 		String text = this.text;
 //		int color = this.color;
 		Array7x7[] arr = new Array7x7[super.getHorizontalPages()];
+		Array7x7 arrChar = new Array7x7();
+		Array7 temparr = new Array7();
 		for(int sizeCheck = 0; sizeCheck < arr.length; sizeCheck++) {
 			text += " ";
 		}
-		Array7x7 arrChar = new Array7x7();
-		Array7 temparr = new Array7();
 		
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = new Array7x7();
@@ -58,6 +59,11 @@ public class Moment4 extends ColorDisplay{
 				}
 			}
 		}
+	}
+	public void randomColor(){
+		Random rand = new Random();
+		Array7x7[] arr = new Array7x7[super.getHorizontalPages()];
+		
 	}
 	public class Test extends TimerTask {
 
