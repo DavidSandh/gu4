@@ -438,6 +438,14 @@ public class Chars {
 			{0,0,0,0,1,0,0},
 			{0,0,0,0,1,0,0},
 			{0,1,1,1,1,0,0}};
+	protected static final int[][] EXCLAIM = {
+			{0,1,0,0,0,0,0},
+			{0,1,0,0,0,0,0},
+			{0,1,0,0,0,0,0},
+			{0,1,0,0,0,0,0},
+			{0,1,0,0,0,0,0},
+			{0,0,0,0,0,0,0},
+			{0,1,0,0,0,0,0}};
 	
 	public static Array7x7 getChar(char chr) {
 		Array7x7 res;
@@ -584,7 +592,9 @@ public class Chars {
 		case '@':
 			res = new Array7x7(Chars.AT);
 			break;
-
+		case '!':
+			res = new Array7x7(Chars.EXCLAIM);
+			break;
 		}
 		return res;
 	}
@@ -731,6 +741,9 @@ public class Chars {
 		case '@':
 			res = new Array7x7(Chars.AT);
 			break;
+		case '!':
+			res = new Array7x7(Chars.EXCLAIM);
+			break;
 		default:
 			res = new Array7x7(Chars.UNKNOWN);
 			break;
@@ -738,7 +751,7 @@ public class Chars {
 		}
 		for(int row = 0; row < 7; row++) {
 			for (int col = 0; col < 7; col++) {
-				if(res.getElement(row, col) != 0) {
+				if(res.getElement(row, col) !=0) {
 					res.setElement(row, col, color);
 				}
 			}
