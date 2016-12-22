@@ -23,18 +23,18 @@ public class Moment4 extends ColorDisplay{
 
 	public void Test() {
 		String text = this.text;
-		int color = this.color;
+//		int color = this.color;
 		Array7x7[] arr = new Array7x7[super.getHorizontalPages()];
 		for(int sizeCheck = 0; sizeCheck < arr.length; sizeCheck++) {
 			text += " ";
 		}
 		Array7x7 arrChar = new Array7x7();
-
 		Array7 temparr = new Array7();
-		System.out.println(arr.length + "");
+		
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = new Array7x7();
 		}
+		
 		for (int i = 0; i < text.length(); i++) {
 			arrChar = Chars.getChar(text.charAt(i), color);
 			int counter2 = 0;

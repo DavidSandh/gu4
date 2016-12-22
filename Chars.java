@@ -590,7 +590,7 @@ public class Chars {
 	}
 	
 	public static Array7x7 getChar(char chr, int color) {
-		Array7x7 res;
+		Array7x7 res = new Array7x7();
 		chr = Character.toUpperCase(chr);
 		switch (chr) {
 		case 'A':
@@ -736,10 +736,10 @@ public class Chars {
 			break;
 
 		}
-		for(int i = 0; i < 7; i++) {
-			for (int j = 0; j < 7; j++) {
-				if(res.getElement(i, j) == 1) {
-					res.setElement(i, j, color);
+		for(int row = 0; row < 7; row++) {
+			for (int col = 0; col < 7; col++) {
+				if(res.getElement(row, col) != 0) {
+					res.setElement(row, col, color);
 				}
 			}
 		}
