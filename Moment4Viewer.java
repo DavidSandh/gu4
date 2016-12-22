@@ -5,17 +5,20 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Dictionary;
+import java.util.Random;
 import java.util.Timer;
 
 import javax.swing.*;
 
 public class Moment4Viewer extends JComponent {
 	private Moment4 m4;
+	
 	private JSlider sliderR = new JSlider(JSlider.HORIZONTAL, 0, 255, 125);
 	private JSlider sliderB = new JSlider(JSlider.HORIZONTAL, 0, 255, 125);
 	private JSlider sliderG = new JSlider(JSlider.HORIZONTAL, 0, 255, 125);
 	private JTextField tfInput = new JTextField("Skriv en text");
 	private JButton btnInput = new JButton("Enter");
+	private JButton btnRandom = new JButton("Random");
 
 	public int getSliderR() {
 		return sliderR.getValue();
@@ -50,7 +53,8 @@ public class Moment4Viewer extends JComponent {
 		ButtonListener bl = new ButtonListener();
 		// labelPanel.setPreferredSize(new Dimension(50,50));
 		btnPanel.add(tfInput, BorderLayout.NORTH);
-		btnPanel.add(btnInput, BorderLayout.SOUTH);
+		btnPanel.add(btnInput, BorderLayout.CENTER);
+		btnPanel.add(btnRandom, BorderLayout.SOUTH);
 		labelPanel.add(red, BorderLayout.NORTH);
 		labelPanel.add(blue, BorderLayout.CENTER);
 		labelPanel.add(green, BorderLayout.SOUTH);
@@ -90,7 +94,10 @@ public class Moment4Viewer extends JComponent {
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource() == btnInput) {
 				m4.addStuff(getTfInput(), Color.rgb(getSliderR(), getSliderG(), getSliderB()));
-				//m4.Test(getTfInput(), Color.rgb(getSliderR(), getSliderG(), getSliderB()));
+//				m4.Test(getTfInput(), Color.rgb(getSliderR(), getSliderG(), getSliderB()));
+			if (e.getSource() == btnRandom){
+				
+			}
 			}
 		}
 

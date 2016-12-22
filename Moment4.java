@@ -61,13 +61,11 @@ public class Moment4 extends ColorDisplay{
 		}
 	}
 	public void randomColor(){
-		Random rand = new Random();
-		Array7x7[] arr = new Array7x7[super.getHorizontalPages()];
 		
 	}
 	public class Test extends TimerTask {
 
-		@Override
+		
 		public void run() {
 			Test();
 			cancel();
