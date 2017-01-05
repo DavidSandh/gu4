@@ -1,5 +1,7 @@
 package gu4;
 
+import java.util.Random;
+
 public class Array7x7 {
 	private int[][] arr = new int[7][7];
 

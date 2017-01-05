@@ -4,10 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Dictionary;
-import java.util.Random;
-import java.util.Timer;
-
 import javax.swing.*;
 
 public class Moment4Viewer extends JComponent {
@@ -44,12 +40,12 @@ public class Moment4Viewer extends JComponent {
 	private JPanel labelPanel = new JPanel(new BorderLayout());
 	private JPanel sliders = new JPanel(new BorderLayout());
 	private JPanel btnPanel = new JPanel(new BorderLayout());
-	private Timer timer;
 
 	private JFrame frame = new JFrame("Moment4");
 
 	public Moment4Viewer(Moment4 m4) {
 		this.m4 = m4;
+		m4.addViewer(this);
 		ButtonListener bl = new ButtonListener();
 		// labelPanel.setPreferredSize(new Dimension(50,50));
 		btnPanel.add(tfInput, BorderLayout.NORTH);
@@ -73,31 +69,22 @@ public class Moment4Viewer extends JComponent {
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 		btnInput.addActionListener(bl);
+		btnRandom.addActionListener(bl);
 	}
-
-//	public void run(String text, int color) {
-//		timer = new Timer();
-//		timer.schedule(new Test(), 500, 500);
-//	}
-
-//	public void actionPerformed(ActionEvent e) {
-//		String command = e.getActionCommand();
-//		if (e.getSource() == btnInput) {
-//			run(getTfInput(), Color.rgb(getSliderR(), getSliderG(), getSliderB()));
-//			System.out.print(getTfInput());
-//			System.out.println(Color.rgb(getSliderR(), getSliderG(), getSliderB()));
-//
-//		}
-//	}
+	
+	public void toggleBtns(boolean toggle) {
+			btnInput.setEnabled(toggle);
+			btnRandom.setEnabled(toggle);
+	}
 
 	private class ButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource() == btnInput) {
+				toggleBtns(false);
 				m4.addStuff(getTfInput(), Color.rgb(getSliderR(), getSliderG(), getSliderB()));
-//				m4.Test(getTfInput(), Color.rgb(getSliderR(), getSliderG(), getSliderB()));
-			if (e.getSource() == btnRandom){
-				
 			}
+			if (e.getSource() == btnRandom){
+				m4.randomColor();	
 			}
 		}
 

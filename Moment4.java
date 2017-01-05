@@ -1,13 +1,8 @@
 package gu4;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.TimeUnit;
-
-import javax.swing.JOptionPane;
 
 public class Moment4 extends ColorDisplay{
 	private Moment4Viewer viewer;
@@ -21,10 +16,12 @@ public class Moment4 extends ColorDisplay{
 	public Moment4(int verticalPages, int horizontalpages, int background, int grid, int gridStroke, int sideSize) {
 		super(verticalPages, horizontalpages, background, grid, gridStroke, sideSize);
 	}
+	public void addViewer(Moment4Viewer viewer){
+		this.viewer = viewer;
+	}
 
 	public void Test() {
 		String text = this.text;
-//		int color = this.color;
 		Array7x7[] arr = new Array7x7[super.getHorizontalPages()];
 		Array7x7 arrChar = new Array7x7();
 		Array7 temparr = new Array7();
@@ -61,6 +58,20 @@ public class Moment4 extends ColorDisplay{
 		}
 	}
 	public void randomColor(){
+		Random rand = new Random();
+		Array7x7[] arr = new Array7x7[super.getHorizontalPages()];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = new Array7x7();
+		}
+		for(int i = 0; i < super.getHorizontalPages(); i++) {
+			for(int row = 0; row < 7; row++) {
+				for(int col = 0; col < 7; col++) {
+					arr[i].setElement(row, col, Color.rgb(rand.nextInt(256), rand.nextInt(256), rand.nextInt(256)));
+				}
+			}
+			super.setDisplay(arr[i].getArray(), 0, i);
+			super.updateDisplay();
+		}
 		
 	}
 	public class Test extends TimerTask {
@@ -69,6 +80,7 @@ public class Moment4 extends ColorDisplay{
 		public void run() {
 			Test();
 			cancel();
+			viewer.toggleBtns(true);
 			
 			
 		}
