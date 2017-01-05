@@ -8,14 +8,23 @@ import javax.swing.*;
 
 public class Moment4Viewer extends JComponent {
 	private Moment4 m4;
-	
 	private JSlider sliderR = new JSlider(JSlider.HORIZONTAL, 0, 255, 125);
 	private JSlider sliderB = new JSlider(JSlider.HORIZONTAL, 0, 255, 125);
 	private JSlider sliderG = new JSlider(JSlider.HORIZONTAL, 0, 255, 125);
 	private JTextField tfInput = new JTextField("Skriv en text");
 	private JButton btnInput = new JButton("Enter");
 	private JButton btnRandom = new JButton("Random");
-
+	private JPanel panelSliders = new JPanel(new BorderLayout());
+	private JPanel panel = new JPanel(new BorderLayout());
+	private JLabel red = new JLabel("RÖD");
+	private JLabel blue = new JLabel("BLÅ");
+	private JLabel green = new JLabel("GRÖN");
+	private JPanel labelPanel = new JPanel(new BorderLayout());
+	private JPanel sliders = new JPanel(new BorderLayout());
+	private JPanel btnPanel = new JPanel(new BorderLayout());
+	private JFrame frame = new JFrame("Moment4");
+	
+	
 	public int getSliderR() {
 		return sliderR.getValue();
 	}
@@ -31,17 +40,6 @@ public class Moment4Viewer extends JComponent {
 	public String getTfInput() {
 		return tfInput.getText();
 	}
-
-	private JPanel panelSliders = new JPanel(new BorderLayout());
-	private JPanel panel = new JPanel(new BorderLayout());
-	private JLabel red = new JLabel("RÖD");
-	private JLabel blue = new JLabel("BLÅ");
-	private JLabel green = new JLabel("GRÖN");
-	private JPanel labelPanel = new JPanel(new BorderLayout());
-	private JPanel sliders = new JPanel(new BorderLayout());
-	private JPanel btnPanel = new JPanel(new BorderLayout());
-
-	private JFrame frame = new JFrame("Moment4");
 
 	public Moment4Viewer(Moment4 m4) {
 		this.m4 = m4;
