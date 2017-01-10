@@ -3,24 +3,47 @@ package gu4;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
-
+/**
+ * Controller
+ * @author Lucas, David, John, Simon, Alexander
+ *
+ */
 public class Moment4 extends ColorDisplay{
 	private Moment4Viewer viewer;
 	private String text;
 	private Timer timer;
 	private int color;
+	/**
+	 * Constructor 
+	 * @param background background color in int
+	 * @param grid grid color
+	 */
 	public Moment4(int background, int grid) {
 		super(background, grid);
 	}
-
+	/**
+	 * 
+	 * @param verticalPages Size vertical
+	 * @param horizontalpages Size horizontal
+	 * @param background background color
+	 * @param grid grid color
+	 * @param gridStroke size of gridlines
+	 * @param sideSize 
+	 */
 	public Moment4(int verticalPages, int horizontalpages, int background, int grid, int gridStroke, int sideSize) {
 		super(verticalPages, horizontalpages, background, grid, gridStroke, sideSize);
 	}
+	/**
+	 * adds viewer reference
+	 * @param viewer reference to viewer
+	 */
 	public void addViewer(Moment4Viewer viewer){
 		this.viewer = viewer;
 	}
-
-	public void Test() {
+	/**
+	 * Moves text to the left with a sleep time.
+	 */
+	public void textSlide() {
 		String text = this.text;
 		Array7x7[] arr = new Array7x7[super.getHorizontalPages()];
 		Array7x7 arrChar = new Array7x7();
@@ -57,6 +80,9 @@ public class Moment4 extends ColorDisplay{
 			}
 		}
 	}
+	/**
+	 * Puts a random color value in every array field.
+	 */
 	public void randomColor(){
 		Random rand = new Random();
 		Array7x7[] arr = new Array7x7[super.getHorizontalPages()];
@@ -74,11 +100,16 @@ public class Moment4 extends ColorDisplay{
 		}
 		
 	}
+	/**
+	 * Innerclass using TimerTask 
+	 */
 	public class Test extends TimerTask {
 
-		
+		/**
+		 * runs textSlide() and cancel it after one iteration then toggleBtns to true.
+		 */
 		public void run() {
-			Test();
+			textSlide();
 			cancel();
 			viewer.toggleBtns(true);
 			
@@ -86,6 +117,11 @@ public class Moment4 extends ColorDisplay{
 		}
 		
 	}
+	/**
+	 *  sets text and color to new values.
+	 * @param text input text from textField
+	 * @param color input color from sliders
+	 */
 	public void addStuff(String text, int color) {
 		this.text = text;
 		this.color = color;

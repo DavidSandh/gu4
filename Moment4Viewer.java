@@ -5,7 +5,11 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-
+/**
+ * Viewer class with interface
+ * @author Lucas, David, John, Simon, Alexander
+ *
+ */
 public class Moment4Viewer extends JComponent {
 	private Moment4 m4;
 	private JSlider sliderR = new JSlider(JSlider.HORIZONTAL, 0, 255, 125);
@@ -24,23 +28,38 @@ public class Moment4Viewer extends JComponent {
 	private JPanel btnPanel = new JPanel(new BorderLayout());
 	private JFrame frame = new JFrame("Moment4");
 	
-	
+	/**
+	 * 
+	 * @return slider value
+	 */
 	public int getSliderR() {
 		return sliderR.getValue();
 	}
-
+	/**
+	 * 
+	 * @return slider value
+	 */
 	public int getSliderB() {
 		return sliderB.getValue();
 	}
-
+	/**
+	 * 
+	 * @return slider value
+	 */
 	public int getSliderG() {
 		return sliderG.getValue();
 	}
-
+	/**
+	 * 
+	 * @return textvalue from tfInput
+	 */
 	public String getTfInput() {
 		return tfInput.getText();
 	}
-
+	/**
+	 * adds buttons sliders and textfields.
+	 * @param m4 puts Moment4 as m4 reference
+	 */
 	public Moment4Viewer(Moment4 m4) {
 		this.m4 = m4;
 		m4.addViewer(this);
@@ -69,12 +88,15 @@ public class Moment4Viewer extends JComponent {
 		btnInput.addActionListener(bl);
 		btnRandom.addActionListener(bl);
 	}
-	
+	/**
+	 * toggles buttons to toggle value
+	 * @param toggle boolean value
+	 */
 	public void toggleBtns(boolean toggle) {
 			btnInput.setEnabled(toggle);
 			btnRandom.setEnabled(toggle);
 	}
-
+	
 	private class ButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource() == btnInput) {
